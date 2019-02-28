@@ -6,6 +6,13 @@ app = Flask(__name__)
 def hello_world():
     return current_app.send_static_file('home.html')
 
-@app.route('/style.csvv')
+@app.route('/style.css')
 def serve_style():
 	return current_app.send_static_file('style.css')
+
+@app.route('/favicon.ico')
+def serve_fav():
+	return current_app.send_static_file('favicon.jpg')
+
+	
+
