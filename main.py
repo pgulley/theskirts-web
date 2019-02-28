@@ -1,8 +1,7 @@
-from flask import Flask
+from flask import Flask, current_app
 app = Flask(__name__)
 
-print("we got here")
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return current_app.send_static_file('home.html')
