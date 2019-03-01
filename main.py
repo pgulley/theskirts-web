@@ -1,4 +1,4 @@
-from flask import Flask, current_app
+from flask import Flask, current_app, send_from_directory
 app = Flask(__name__)
 
 
@@ -14,5 +14,7 @@ def serve_style():
 def serve_fav():
 	return current_app.send_static_file('favicon.jpg')
 
-	
+@app.route("/image/<path:filename>")
+def serve_image(filename):
+	return send_from_directory('static/', filename)
 
