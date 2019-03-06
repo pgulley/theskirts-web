@@ -33,7 +33,7 @@ def serve_doodl():
 				"size":str(random.randint(80,200))} 
 			for i in range(num_doods)]
 
-	print doodls 
+	
 	with open("templates/doodl.css") as css:
 		template = css.read()
 
