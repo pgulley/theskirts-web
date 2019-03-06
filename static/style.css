@@ -1,17 +1,25 @@
 body{
-	background-color: #D9CD73;
+	background-color: #674848;
 }
 
 div{
 	padding:20px;
 }
 
+div.main{
+	z-index:10;
+	padding-top:10px;
+
+}
+
 div.header{
-	margin-bottom:5px;
+	margin-bottom:20px;
 	background-color: #AC8EB8;
+	float:left;
 }
 
 div.feeds{
+	float:right;
 	background-color: #AC8EB8;
 }
 
@@ -21,9 +29,18 @@ div.feed{
 }
 
 div.doodls{
+	position:fixed;
 	text-align: center;
 	padding-right:5px;
 	padding-left:5px;
+	z-index:-10;
+}
+
+div.ext_doodls{
+	text-align: center;
+	padding-right:5px;
+	padding-left:5px;
+
 }
 
 h1 {
