@@ -1,13 +1,20 @@
 {% for doodl in doodls: %} 
 #doodl{{ doodl['id'] }}{
-	width:{{ doodl['size'] }}px;
-	height:{{ doodl['size'] }}px;
+	width:{{ doodl['y_size'] }}px;
+	height:{{ doodl['x_size'] }}px;
 	background-color: {{ doodl['color'] }};
+	display:inline-block;
+
 	-webkit-mask-image: url( {{ doodl['url'] }} );
 	-webkit-mask-size:contain;
+	-webkit-mask-repeat:no-repeat;
+	-webkit-transform: rotate( {{ doodl["rot"] }}deg);
+
 	mask-image:url( {{ doodl['url'] }} );
 	mask-size:contain;
-	display:inline-block;
+	mask-repeat:no-repeat;
+	transform: rotate( {{ doodl["rot"] }}deg);
+	margin:20px;
 }
 
 {% endfor %}
