@@ -34,5 +34,3 @@ def serve_doodl():
 
 
 
-
-app.run(debug=True)
