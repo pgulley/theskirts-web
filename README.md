@@ -11,4 +11,4 @@ Contains:
 FEATURES
 - [X] serve images universally. Place in .static/ and point to as ./image/, should just work.
 - [x] static feed integration. gotta love the modern web. 
-
+- [ ] Random wallpaper
