@@ -1,5 +1,5 @@
 body{
-	background-color: #674848;
+	background-color: #f1dfdf;
 }
 
 div{
@@ -33,15 +33,10 @@ div.doodls{
 	text-align: center;
 	padding-right:5px;
 	padding-left:5px;
+	margin-top:-50;
 	z-index:-10;
 }
 
-div.ext_doodls{
-	text-align: center;
-	padding-right:5px;
-	padding-left:5px;
-
-}
 
 h1 {
 	margin-top:0;

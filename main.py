@@ -33,8 +33,8 @@ def serve_doodl():
 			img = random.choice(imgs)
 			size = random.randint(50,150)
 			rot = img["rot"]
-			margin = random.randint(10,60)
-			margin_bottom = random.randint(-50,50)
+			margin = random.randint(10,40)
+			margin_bottom = random.randint(-40,40)
 			dood = {
 					"id":i, 
 					"url":"/image/{}.png".format(img["url"]), 
@@ -47,6 +47,7 @@ def serve_doodl():
 			}
 
 		else:
+			#give an empty  tile
 			size = random.randint(50,150)
 			dood = {
 					"id":i, 
