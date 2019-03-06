@@ -31,7 +31,7 @@ def serve_doodl():
 	for i in range(num_doods):
 		if random.randint(0,20) < 19:
 			img = random.choice(imgs)
-			size = random.randint(50,150)
+			size = random.randint(30,100)
 			rot = img["rot"]
 			margin = random.randint(10,40)
 			margin_bottom = random.randint(-40,40)
