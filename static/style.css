@@ -44,6 +44,30 @@ div.doodls{
 	z-index:-10;
 }
 
+div.logo{
+	float:right;
+    margin-top: 20px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+
+	margin-right:20px;
+	background-color: black;
+
+
+	-webkit-mask-image: url("/image/logo_transparent.png");
+	-webkit-mask-size:contain;
+	-webkit-mask-repeat:no-repeat;
+
+	mask-image: url("/image/logo_transparent.png");
+	mask-size:contain;
+	mask-repeat:no-repeat;
+}
+
+div.top{
+	padding:0px;
+	width:100%;
+}
 
 h1 {
 	margin-top:0;
