@@ -16,13 +16,24 @@ def serve_image(filename):
 
 @app.route("/doodl.css")
 def serve_doodl():
+    
+	num_doods = 10
+	urls = ["/image/Su2.png", "/image/Su1.png", "/image/Su3.png", "/image/Su4.png"]
+	colors = ["pink", "purple", "#8cce90"]
+	#eventually also generate random positions, sizes, and rotations
+	# maybe with some kinda perlin noise thing, so they don't stack on top of each other all ugly. 
+	# also certain doodls should probably have direction biases- don't want to generate flowers upsidedown. probably. 
 
-	num_doods = 5
-	urls = ["/image/Su2.png", "/image/Su1.png"]
-	colors = ["pink", "purple", "#8cce90", "#a38cce"]
+	# color distribution should be harmonized with page colors- with a slightly biased chance of a saturation outlier. 
 
-	doodls = [{"id":i, "url":random.choice(urls), "color": random.choice(colors)} for i in range(0,num_doods)]
+	doodls = [{
+				"id":i, 
+				"url":random.choice(urls), 
+				"color": random.choice(colors),
+				"size":str(random.randint(80,200))} 
+			for i in range(num_doods)]
 
+	print doodls 
 	with open("templates/doodl.css") as css:
 		template = css.read()
 

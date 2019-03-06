@@ -1,7 +1,7 @@
 {% for doodl in doodls: %} 
 #doodl{{ doodl['id'] }}{
-	width:80px;
-	height:80px;
+	width:{{ doodl['size'] }}px;
+	height:{{ doodl['size'] }}px;
 	background-color: {{ doodl['color'] }};
 	-webkit-mask-image: url( {{ doodl['url'] }} );
 	-webkit-mask-size:contain;
