@@ -20,6 +20,12 @@ div.feed{
 	padding:5px;
 }
 
+div.doodls{
+	text-align: center;
+	padding-right:5px;
+	padding-left:5px;
+}
+
 h1 {
 	margin-top:0;
 }

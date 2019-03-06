@@ -17,7 +17,7 @@ def serve_image(filename):
 @app.route("/doodl.css")
 def serve_doodl():
     
-	num_doods = 10
+	num_doods = 20
 	#dictionary contains image location and rendering constraints- like aspect ratio and rotation range
 	imgs = [{"url":"Su1", "ratio":0.8632, "rot":25},
 			{"url":"Su2", "ratio":0.7013, "rot":25}, 
@@ -25,23 +25,43 @@ def serve_doodl():
 			{"url":"Su4", "ratio":0.9099, "rot":25},
 			{"url":"Su5", "ratio":0.9162, "rot":25}]
 	colors = ["pink", "purple", "#8cce90","#94b4bb","#E880F7"]
-	#eventually also generate random positions
-	# maybe with some kinda perlin noise thing, so they don't stack on top of each other all ugly. 
-	# color distribution should be harmonized with page colors- with a slightly biased chance of a saturation outlier. 
+	# color distribution should be harmonized with page colors, and generally desaturated. 
+
 	doodls = []
 	for i in range(num_doods):
-		img = random.choice(imgs)
-		size = random.randint(80,250)
-		rot = img["rot"]
-		dood = {
-				"id":i, 
-				"url":"/image/{}.png".format(img["url"]), 
-				"color": random.choice(colors),
-				"x_size":size,
-				"y_size":size*img["ratio"],
-				"rot": random.randint(-rot,rot)
-		}
+		if random.randint(0,20) < 19:
+			img = random.choice(imgs)
+			size = random.randint(50,150)
+			rot = img["rot"]
+			margin = random.randint(10,60)
+			margin_bottom = random.randint(-50,50)
+			dood = {
+					"id":i, 
+					"url":"/image/{}.png".format(img["url"]), 
+					"color": random.choice(colors),
+					"x_size":size,
+					"y_size":size*img["ratio"],
+					"rot": random.randint(-rot,rot), 
+					"margin":margin, 
+					"margin_bottom":margin_bottom
+			}
+
+		else:
+			size = random.randint(50,150)
+			dood = {
+					"id":i, 
+					"url": "None",
+					"color": "None",
+					"x_size": size,
+					"y_size": size,
+					"rot":0,
+					"margin": 20, 
+					"margin_bottom":0
+			}
+
 		doodls.append(dood)
+
+		
 
 
 	with open("templates/doodl.css") as css:

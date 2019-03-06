@@ -1,9 +1,12 @@
+
 {% for doodl in doodls: %} 
 #doodl{{ doodl['id'] }}{
 	width:{{ doodl['y_size'] }}px;
 	height:{{ doodl['x_size'] }}px;
 	background-color: {{ doodl['color'] }};
 	display:inline-block;
+	margin:{{ doodl['margin'] }}px;
+	margin-bottom:{{ doodl['margin-bottom'] }}px;
 
 	-webkit-mask-image: url( {{ doodl['url'] }} );
 	-webkit-mask-size:contain;
@@ -14,7 +17,5 @@
 	mask-size:contain;
 	mask-repeat:no-repeat;
 	transform: rotate( {{ doodl["rot"] }}deg);
-	margin:20px;
 }
-
 {% endfor %}
