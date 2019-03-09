@@ -14,9 +14,9 @@ def serve_util(filename):
 def serve_image(filename):
 	return send_from_directory('images/', filename)
 
+#randomly generates num_doods css classes to display the doodl background wallpaper. 
 @app.route("/doodl.css")
 def serve_doodl():
-    
 	num_doods = 20
 	#dictionary contains image location and rendering constraints- like aspect ratio and rotation range
 	imgs = [{"url":"Su1", "ratio":0.8632, "rot":25},

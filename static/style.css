@@ -17,6 +17,7 @@ div.header{
 	background-color: #AC8EB8;
 	float:left;
 	width:55%;
+	display:block;
 }
 
 div.header img{
@@ -24,10 +25,19 @@ div.header img{
 	max-height:100%;
 }
 
-div.feeds{
+div.feedsR{
+	clear:both;
 	float:right;
 	max-width:70%;
 	background-color: #AC8EB8;
+}
+
+div.feedsL{
+	clear:both;
+	float:left;
+	max-width:70%;
+	background-color: #AC8EB8;
+	margin-top:10px;
 }
 
 div.feed{
