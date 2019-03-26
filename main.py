@@ -23,7 +23,15 @@ def serve_doodl():
 			{"url":"Su2", "ratio":0.7013, "rot":25}, 
 			{"url":"Su3", "ratio":0.6587, "rot":25}, 
 			{"url":"Su4", "ratio":0.9099, "rot":25},
-			{"url":"Su5", "ratio":0.9162, "rot":25}]
+			{"url":"Su5", "ratio":0.9162, "rot":25},
+			{"url":"Pa1", "ratio":0.9977, "rot":90},
+			{"url":"Pa2", "ratio":0.5214, "rot":45},
+			{"url":"Pa3", "ratio":0.5214, "rot":25},
+			{"url":"Pa4", "ratio":0.8866, "rot":180},
+			{"url":"Ji1", "ratio":0.9790, "rot":25},
+			{"url":"Ji2", "ratio":0.9790, "rot":90},
+			{"url":"Ji3", "ratio":0.4820, "rot":180}
+			]
 	colors = ["pink", "purple", "#8cce90","#94b4bb","#E880F7"]
 	# color distribution should be harmonized with page colors, and generally desaturated. 
 
