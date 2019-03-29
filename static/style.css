@@ -37,7 +37,7 @@ div.feeds{
 	clear:both;
 	max-width:70%;
 	background-color: #AC8EB8;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	padding-top:0px;
 }
 
@@ -61,12 +61,13 @@ div.feed{
 }
 
 div.doodls{
-	position:fixed;
+	position:absolute;
 	text-align: center;
 	padding-right:5px;
 	padding-left:5px;
 	margin-top:-50;
 	z-index:-10;
+	height:1700px;
 }
 
 div.logo{

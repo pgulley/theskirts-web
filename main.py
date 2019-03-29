@@ -17,7 +17,7 @@ def serve_image(filename):
 #randomly generates num_doods css classes to display the doodl background wallpaper. 
 @app.route("/doodl.css")
 def serve_doodl():
-	num_doods = 20
+	num_doods = 40
 	#dictionary contains image location and rendering constraints- like aspect ratio and rotation range
 	imgs = [{"url":"Su1", "ratio":0.8632, "rot":25},
 			{"url":"Su2", "ratio":0.7013, "rot":25}, 
@@ -30,14 +30,19 @@ def serve_doodl():
 			{"url":"Pa4", "ratio":0.8866, "rot":180},
 			{"url":"Ji1", "ratio":0.9790, "rot":25},
 			{"url":"Ji2", "ratio":0.9790, "rot":90},
-			{"url":"Ji3", "ratio":0.4820, "rot":180}
+			{"url":"Ji3", "ratio":0.4820, "rot":180},
+			{"url":"Jo1", "ratio":0.7863, "rot":180},
+			{"url":"Jo2", "ratio":1.2310, "rot":45},
+			{"url":"Jo3", "ratio":1.0000, "rot":100},
+			{"url":"Jo4", "ratio":1.0212, "rot":100},
+			{"url":"Jo5", "ratio":0.8060, "rot":45}
 			]
-	colors = ["pink", "purple", "#8cce90","#94b4bb","#E880F7"]
+	colors = ["pink", "purple", "#8cce90","#94b4bb","#E880F7", "#82a4c7"]
 	# color distribution should be harmonized with page colors, and generally desaturated. 
 
 	doodls = []
 	for i in range(num_doods):
-		if random.randint(0,20) < 19:
+		if random.randint(0,30) < 29:
 			img = random.choice(imgs)
 			size = random.randint(30,100)
 			rot = img["rot"]
