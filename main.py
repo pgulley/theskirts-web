@@ -37,7 +37,7 @@ def serve_doodl():
 			{"url":"Jo4", "ratio":1.0212, "rot":100},
 			{"url":"Jo5", "ratio":0.8060, "rot":45}
 			]
-	colors = ["pink", "purple", "#8cce90","#94b4bb","#E880F7", "#82a4c7"]
+	colors = ["#fd9ac8", "purple", "#8cce90","#94b4bb","#E880F7", "#82a4c7"]
 	# color distribution should be harmonized with page colors, and generally desaturated. 
 
 	doodls = []
