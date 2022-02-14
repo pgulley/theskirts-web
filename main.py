@@ -22,6 +22,14 @@ def serve_util(filename):
 def serve_image(filename):
 	return send_from_directory('images/', filename)
 
+@app.route("/happy_smash_day")
+def spash_day():
+	return current_app.send_static_file("hause.html")
+
+@app.route("/happy-smash-day")
+def smash_day():
+	return current_app.send_static_file("hause.html")
+
 #randomly generates num_doods css classes to display the doodl background wallpaper. 
 @app.route("/doodl.css")
 def serve_doodl():
@@ -94,6 +102,3 @@ def serve_doodl():
 
 
 	return Response(doodl_out, mimetype="text/css")
-
-
-
