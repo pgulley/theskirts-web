@@ -2,9 +2,17 @@ from flask import Flask, current_app, send_from_directory, render_template_strin
 import random
 app = Flask(__name__)
 
+print("this is running")
+
+print(app)
+
 @app.route('/')
 def hello_world():
     return current_app.send_static_file('home.html')
+
+@app.route("/hootenanny")
+def hoot():
+	return current_app.send_static_file("hootenanny.html")
 
 @app.route("/util/<path:filename>")
 def serve_util(filename):

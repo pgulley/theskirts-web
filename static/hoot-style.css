@@ -1,0 +1,75 @@
+@font-face{
+	font-family:naomi;
+	src: url('/util/NaomisHand-Regular.ttf');
+}
+
+@font-face{
+	font-family:naomi-more;
+	src: url('/util/Naomi.ttf');
+}
+
+
+@font-face{
+	font-family:dk;
+	src: url('/util/DK Crayon Crumble.ttf');
+}
+
+body{
+	font-family:dk;
+	font-size:2.5em;
+	line-height:.75em;
+	background-color: #bb85a8;
+	margin-left:0;
+	margin-right:0;
+}
+
+div{
+	padding:20px;
+}
+
+div.main{
+	z-index:10;
+	padding-top:10px;
+	width:100%;
+}
+
+div.column{
+	display:inline-block;
+	width:45%;
+	vertical-align: top;
+}
+
+div.text{
+	line-height:1em;
+}
+
+img.left-column{
+	width:100%;
+	padding:0px;
+}
+img.right-column{
+	width:100%;
+	padding:0px;
+}
+
+ul{
+	margin-top:0;
+	margin-bottom:0;
+	list-style-type:none;
+	padding-left:5px;
+	font-size:.75em;
+}
+
+
+div.outlink{
+	border: 4px solid black;
+	color: black;
+	font-size: 1em;
+	margin-top:30px;
+	text-align:center;
+}
+
+div.details{
+	text-align:center;
+}
+
